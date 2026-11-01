@@ -1,0 +1,91 @@
+vid_path_train: null
+pose_path_train_abnormal: null
+pose_path_train: null
+vid_path_test: null
+pose_path_test: null
+dataset: CHAD
+vid_res: 1280x720
+device: cuda:1
+seed: 999
+verbose: 1
+data_dir: data/
+exp_dir: data/exp_dir
+num_workers: 16
+plot_vid: 0
+only_test: false
+mask_root: /home/nrashvan/Token/data/CHAD/gt/test_frame_mask
+num_transform: 1
+num_kp: 18
+headless: false
+Kalman_filter: false
+norm_scale: 0
+prop_norm_scale: 1
+train_seg_conf_th: 0.0
+seg_len: 72
+seg_stride: 36
+specific_clip: null
+global_pose_segs: true
+relative: false
+traj: false
+model_ckpt_dir: null
+model_save_dir: ./results
+batch_size: 256
+epochs: 8
+model_optimizer: adam
+model_lr: 0.0001
+model_weight_decay: 5.0e-05
+model_lr_decay: 0.99
+sched: cosine
+save_results: true
+save_results_dir: /home/nrashvan/Token/Chad_s72_t8_m32*64/
+log_freq: 200
+grad_clip: 1.0
+ttm_sequence_length: 8
+ttm_embed_dim: 64
+ttm_process_size: 8
+ttm_memory_size: 32
+ttm_num_layers: 2
+ttm_mlp_dim: 128
+ttm_num_heads: 4
+window_num_layers: 2
+dropout: 0.1
+num_static_slots: 32
+static_warmup_epochs: 5
+static_lambda_start: 0.01
+lambda_memory: 0.05
+lambda_static: 0.1
+memory_score_weight: 1.0
+static_score_weight: 1.0
+normal_gate_quantile: 0.99
+vid_path:
+  train: data/CHAD/train/images/
+  test: data/CHAD/test/frames/
+pose_path:
+  train: data/CHAD/pose/train/
+  test: data/CHAD/pose/test/
+  train_abnormal: null
+ckpt_dir: null
+ttm_config:
+  num_keypoints: 18
+  input_dim: 2
+  seg_len: 72
+  seg_stride: 36
+  ttm_sequence_length: 8
+  embed_dim: 64
+  process_size: 8
+  memory_size: 32
+  num_layers: 2
+  mlp_dim: 128
+  num_heads: 4
+  window_num_layers: 2
+  dropout: 0.1
+  memory_mode: TL
+  lambda_memory: 0.05
+  lambda_static: 0.1
+  static_lambda_start: 0.01
+  static_warmup_epochs: 5
+  memory_score_weight: 1.0
+  static_score_weight: 1.0
+  num_static_slots: 32
+  normal_gate_quantile: 0.99
+  grad_clip: 1.0
