@@ -1,0 +1,2 @@
+mean_latency_ms,forwards_per_second,model,checkpoint,segment_length,ttm_steps,input_shape,parameters,trainable_parameters
+13.311273232102394,74.8202588728897,W24_S4,/home/nrashvan/Token/results/ttm_best.pth.tar,72,8,"(1, 8, 2, 72, 18)",2177160,2177160
